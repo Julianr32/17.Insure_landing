@@ -1,0 +1,69 @@
+/* Utilities Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: center;
+  height: 100%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 4rem;
+  font-size: var(--fnt-normal);
+  color: var(--clr-neutral3);
+  cursor: pointer;
+
+  &-ghost {
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid var(--clr-neutral3);
+
+    &:hover {
+      background-color: var(--clr-primary1);
+    }
+  }
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease-in-out forwards;
+}
