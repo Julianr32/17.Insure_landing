@@ -25,10 +25,12 @@ function removeMenu() {
   nav.classList.remove("open");
   navList.classList.remove("fade-in");
   navList.classList.add("fade-out");
+  document.querySelector("body").style.overflow = "auto";
 }
 
 function showMenu() {
   nav.classList.add("open");
   navList.classList.remove("fade-out");
   navList.classList.add("fade-in");
+  document.querySelector("body").style.overflow = "hidden";
 }
