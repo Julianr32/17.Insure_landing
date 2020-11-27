@@ -11,13 +11,20 @@
   --fnt-secondary: "DM Serif Display", serif;
   --fnt-regular: 400;
   --fnt-bold: 700;
-  --fnt-xlarge: 4.8rem;
+  /*   
   --fnt-large: 4rem;
   --fnt-medium: 3rem;
   --fnt-normal: 2.4rem;
   --fnt-small: 2rem;
   --fnt-xsmall: 1.8rem;
-  --fnt-xxsmall: 1.4rem;
+  --fnt-xxsmall: 1.4rem; */
+  --fnt-xlarge: 4.8rem;
+  --fnt-large: 3.2rem;
+  --fnt-medium: 2.2rem;
+  --fnt-normal: 1.8rem;
+  --fnt-small: 1.6rem;
+  --fnt-xsmall: 1.4rem;
+  --fnt-xxsmall: 1.2rem;
   /* @media screen and (min-width: 1660px) {
     --fnt-xbig: 3.906rem;
     --fnt-big: 4rem;
@@ -26,17 +33,6 @@
     --fnt-small: 1.6rem;
     --fnt-xsmall: 1.4rem;
   } */
-}
-
-@media screen and (max-width: 768px) {
-  :root {
-    --fnt-large: 3.2rem;
-    --fnt-medium: 2.2rem;
-    --fnt-normal: 1.8rem;
-    --fnt-small: 1.6rem;
-    --fnt-xsmall: 1.4rem;
-    --fnt-xxsmall: 1.2rem;
-  }
 }
 
 *,
@@ -83,7 +79,7 @@ h4 {
 
 /* Utilities Classes */
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -154,7 +150,7 @@ h4 {
 }
 
 .nav {
-  background-color: var(--clr-neutral3);
+  background-color: #ffffff;
   justify-content: space-between;
   padding: 1.5rem;
   position: relative;
@@ -190,6 +186,7 @@ h4 {
   margin: 3rem 0;
   font-size: var(--fnt-small);
   text-transform: uppercase;
+  user-select: none;
 }
 
 .nav__link {
@@ -404,12 +401,24 @@ footer::before {
 }
 
 .footer {
+  width: 100%;
   text-align: center;
+  padding: 0 1.5rem;
+}
+
+.footer__top {
+  position: relative;
+  display: grid;
+  place-items: center;
 }
 
 .footer__top .logo {
   width: 140px;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+}
+
+.footer__top .social-media a:not(:last-child) {
+  margin-right: 1rem;
 }
 
 .footer__top .social-media i {
@@ -419,6 +428,15 @@ footer::before {
 
 .footer__top .social-media i:hover {
   color: var(--clr-neutral1);
+}
+
+.footer__top::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  bottom: -10%;
 }
 
 .footer__bottom {
@@ -437,6 +455,10 @@ footer::before {
   margin-bottom: 2rem;
 }
 
+.footer__bottom .footer-list li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
 .footer__bottom .footer-list a {
   color: var(--clr-neutral1);
   font-weight: var(--fnt-bold);
@@ -447,4 +469,97 @@ footer::before {
 }
 
 /* ===END-FOOTER=== */
+@media screen and (min-width: 768px) {
+  .nav__list {
+    all: unset;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+  }
+  .nav__item {
+    margin: 0 1.5rem;
+  }
+  .nav__link {
+    color: var(--clr-neutral2);
+  }
+  .nav__link:hover {
+    color: var(--clr-neutral1);
+  }
+  .nav .btn-ghost {
+    border: 2px solid var(--clr-neutral2);
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: 40% auto;
+    place-items: center;
+    padding: 10rem 1.5rem;
+  }
+  .hero__text {
+    text-align: left;
+    padding: 0;
+    order: 1;
+  }
+  .hero__text::before, .hero__text::after {
+    display: none;
+  }
+  .hero__img {
+    order: 2;
+    max-width: 400px;
+    justify-self: flex-end;
+    margin-bottom: -20rem;
+  }
+  .features {
+    padding: 15rem 0 5rem 0;
+  }
+  .features__header {
+    text-align: left;
+  }
+  .features__header::before {
+    left: 0;
+    transform: translateX(0);
+    width: 10%;
+  }
+  .features__wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .features__wrapper .card {
+    display: grid;
+    place-items: flex-start;
+    text-align: left;
+  }
+  .features__wrapper .card:not(:last-child) {
+    margin-bottom: unset;
+  }
+  footer::before {
+    background-image: url("../images/bg-pattern-footer-desktop.svg");
+  }
+  .footer {
+    text-align: left;
+    width: 100%;
+  }
+  .footer__top, .footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer__top {
+    margin-bottom: 5rem;
+  }
+  .footer__top .logo {
+    margin-bottom: 0;
+  }
+  .footer__top::after {
+    bottom: -60%;
+  }
+  .footer__bottom {
+    width: 70%;
+  }
+}
 /*# sourceMappingURL=main.css.map */
