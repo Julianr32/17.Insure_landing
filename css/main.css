@@ -283,7 +283,7 @@ h4 {
 /* ===END-SECTION-1-HERO=== */
 /* ===SECTION-2-FEATURES=== */
 .section-2 {
-  padding: 10rem 1.5rem;
+  padding: 8rem 1.5rem;
 }
 
 .features__header {
@@ -336,7 +336,7 @@ h4 {
 /* ===END-SECTION-2-FEATURES=== */
 /* ===SECTION-3-HWW=== */
 .section-3 {
-  padding: 10rem 1.5rem;
+  padding: 8rem 1.5rem;
 }
 
 .hww {
@@ -382,7 +382,7 @@ footer {
   background-color: var(--clr-neutral3);
   display: grid;
   place-items: center;
-  padding: 10rem 0 5rem 0;
+  padding: 5rem 0;
   z-index: 10;
 }
 
@@ -413,7 +413,7 @@ footer::before {
 }
 
 .footer__top .logo {
-  width: 140px;
+  width: 120px;
   margin-bottom: 4rem;
 }
 
@@ -470,6 +470,33 @@ footer::before {
 
 /* ===END-FOOTER=== */
 @media screen and (min-width: 768px) {
+  .section-1 {
+    position: relative;
+  }
+  .section-1::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 0;
+    right: 0;
+    background-image: url("../images/bg-pattern-intro-right-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+  }
+  .section-1::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    bottom: -40%;
+    left: 0;
+    background-image: url("../images/bg-pattern-intro-left-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: contain;
+  }
   .nav__list {
     all: unset;
     height: 100%;
@@ -533,9 +560,24 @@ footer::before {
     display: grid;
     place-items: flex-start;
     text-align: left;
+    margin: 0;
   }
   .features__wrapper .card:not(:last-child) {
     margin-bottom: unset;
+    margin-right: 1rem;
+  }
+  .hww {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 6rem;
+  }
+  .hww h2 {
+    margin-bottom: unset;
+  }
+  .hww::after {
+    background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
   }
   footer::before {
     background-image: url("../images/bg-pattern-footer-desktop.svg");
