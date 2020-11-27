@@ -5,7 +5,7 @@
 
   --clr-neutral1: hsl(270, 9%, 17%);
   --clr-neutral2: hsl(273, 4%, 51%);
-  --clr-neutral3: hsl(0, 0%, 98%);
+  --clr-neutral3: hsl(0, 0%, 96%);
 
   /* Font & Typography */
 
@@ -24,12 +24,12 @@
   --fnt-xxsmall: 1.4rem;
 
   @media screen and (max-width: 768px) {
-    --fnt-xlarge: 4.2rem;
-    --fnt-large: 3.4rem;
-    --fnt-medium: 2.4rem;
-    --fnt-normal: 2rem;
-    --fnt-small: 1.8rem;
-    --fnt-xsmall: 1.6rem;
+    --fnt-large: 3.2rem;
+    --fnt-medium: 2.2rem;
+    --fnt-normal: 1.8rem;
+    --fnt-small: 1.6rem;
+    --fnt-xsmall: 1.4rem;
+    --fnt-xxsmall: 1.2rem;
   }
 
   /* @media screen and (min-width: 1660px) {
