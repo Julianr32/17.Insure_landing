@@ -38,6 +38,7 @@ h1,
 h2,
 h3,
 h4 {
+  font-weight: var(--fnt-bold);
   font-family: var(--fnt-secondary);
   line-height: 1;
 }
@@ -83,7 +84,7 @@ h4 {
 
   &__item {
     margin: 3rem 0;
-    font-size: var(--fnt-normal);
+    font-size: var(--fnt-small);
     text-transform: uppercase;
   }
 
@@ -143,7 +144,7 @@ h4 {
     color: var(--clr-neutral3);
 
     h1 {
-      font-size: var(--fnt-big);
+      font-size: var(--fnt-xlarge);
     }
 
     p {
@@ -197,9 +198,9 @@ h4 {
       content: "";
       position: absolute;
       left: 50%;
-      top: -50%;
+      top: -100%;
       transform: translateX(-50%);
-      width: 50%;
+      width: 20%;
       height: 1px;
       background-color: var(--clr-neutral2);
     }
@@ -242,6 +243,7 @@ h4 {
 .section-3 {
   padding: 0 1.5rem;
 }
+
 .hww {
   position: relative;
   padding: 4rem;
@@ -252,7 +254,7 @@ h4 {
   text-align: center;
 
   h2 {
-    font-size: var(--fnt-big);
+    font-size: var(--fnt-large);
     margin-bottom: 4rem;
   }
 
@@ -272,6 +274,7 @@ h4 {
     background-size: contain;
     top: 0;
     right: 0;
+    pointer-events: none;
   }
 }
 /* ===END-SECTION-3-HWW=== */

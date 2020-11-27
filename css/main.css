@@ -11,32 +11,30 @@
   --fnt-secondary: "DM Serif Display", serif;
   --fnt-regular: 400;
   --fnt-bold: 700;
-  --fnt-xlarge: 6.104rem;
-  --fnt-large: 4.883rem;
-  --fnt-xbig: 3.906rem;
-  --fnt-big: 4rem;
-  --fnt-medium: 2.5rem;
-  --fnt-normal: 2rem;
-  --fnt-small: 1.6rem;
-  --fnt-xsmall: 1.4rem;
+  --fnt-xlarge: 4.8rem;
+  --fnt-large: 4rem;
+  --fnt-medium: 3rem;
+  --fnt-normal: 2.4rem;
+  --fnt-small: 2rem;
+  --fnt-xsmall: 1.8rem;
+  --fnt-xxsmall: 1.4rem;
+  /* @media screen and (min-width: 1660px) {
+    --fnt-xbig: 3.906rem;
+    --fnt-big: 4rem;
+    --fnt-medium: 2.5rem;
+    --fnt-normal: 2rem;
+    --fnt-small: 1.6rem;
+    --fnt-xsmall: 1.4rem;
+  } */
 }
 
 @media screen and (max-width: 768px) {
   :root {
-    --fnt-big: 3.4rem;
-    --fnt-medium: 2.2rem;
-    --fnt-normal: 1.8rem;
-    --fnt-small: 1.4rem;
-    --fnt-xsmall: 1.2rem;
-  }
-}
-
-@media screen and (min-width: 1660px) {
-  :root {
-    --fnt-big: 3.4rem;
-    --fnt-medium: 2.8rem;
-    --fnt-normal: 2.2rem;
-    --fnt-small: 2rem;
+    --fnt-xlarge: 4.2rem;
+    --fnt-large: 3.4rem;
+    --fnt-medium: 2.4rem;
+    --fnt-normal: 2rem;
+    --fnt-small: 1.8rem;
     --fnt-xsmall: 1.6rem;
   }
 }
@@ -78,6 +76,7 @@ h1,
 h2,
 h3,
 h4 {
+  font-weight: var(--fnt-bold);
   font-family: var(--fnt-secondary);
   line-height: 1;
 }
@@ -189,7 +188,7 @@ h4 {
 
 .nav__item {
   margin: 3rem 0;
-  font-size: var(--fnt-normal);
+  font-size: var(--fnt-small);
   text-transform: uppercase;
 }
 
@@ -244,7 +243,7 @@ h4 {
 }
 
 .hero__text h1 {
-  font-size: var(--fnt-big);
+  font-size: var(--fnt-xlarge);
 }
 
 .hero__text p {
@@ -297,9 +296,9 @@ h4 {
   content: "";
   position: absolute;
   left: 50%;
-  top: -50%;
+  top: -100%;
   transform: translateX(-50%);
-  width: 50%;
+  width: 20%;
   height: 1px;
   background-color: var(--clr-neutral2);
 }
@@ -351,7 +350,7 @@ h4 {
 }
 
 .hww h2 {
-  font-size: var(--fnt-big);
+  font-size: var(--fnt-large);
   margin-bottom: 4rem;
 }
 
@@ -371,6 +370,7 @@ h4 {
   background-size: contain;
   top: 0;
   right: 0;
+  pointer-events: none;
 }
 
 /* ===END-SECTION-3-HWW=== */
