@@ -171,7 +171,7 @@ h4 {
   min-height: 88vh;
   background-color: var(--clr-neutral1);
   text-align: center;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .nav__list::after {
