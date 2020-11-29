@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
 
 @import "variables";
+
 *,
 ::before,
 ::after {
@@ -164,8 +165,7 @@ h4 {
       position: absolute;
       width: 70%;
       height: 70%;
-      background-image: url("../images/bg-pattern-intro-left-mobile.svg");
-      background-repeat: no-repeat;
+      background: url("../images/bg-pattern-intro-left-mobile.svg") no-repeat;
       top: 0;
       left: 0;
       z-index: -1;
@@ -176,10 +176,8 @@ h4 {
       position: absolute;
       width: 70%;
       height: 70%;
-      background-image: url("../images/bg-pattern-intro-right-mobile.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: right bottom;
+      background: url("../images/bg-pattern-intro-right-mobile.svg") no-repeat
+        right bottom/contain;
       right: 0;
       bottom: -40%;
       z-index: -1;
@@ -388,10 +386,8 @@ footer {
       height: 80%;
       top: 0;
       right: 0;
-      background-image: url("../images/bg-pattern-intro-right-desktop.svg");
-      background-repeat: no-repeat;
-      background-position: top right;
-      background-size: contain;
+      background: url("../images/bg-pattern-intro-right-desktop.svg") no-repeat
+        top right/contain;
     }
 
     &::before {
@@ -401,12 +397,11 @@ footer {
       height: 80%;
       bottom: -40%;
       left: 0;
-      background-image: url("../images/bg-pattern-intro-left-desktop.svg");
-      background-repeat: no-repeat;
-      background-position: bottom left;
-      background-size: contain;
+      background: url("../images/bg-pattern-intro-left-desktop.svg") no-repeat
+        bottom left/contain;
     }
   }
+
   .nav {
     &__list {
       all: unset;
@@ -425,12 +420,19 @@ footer {
 
       &:hover {
         color: var(--clr-neutral1);
+        text-decoration: underline;
       }
     }
 
-    .btn-ghost {
-      border: 2px solid var(--clr-neutral2);
+    .btn-dark {
+      border: 2px solid var(--clr-neutral1);
+
+      &:hover {
+        color: #fff;
+        border-color: transparent;
+      }
     }
+
     &__toggle {
       display: none;
     }

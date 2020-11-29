@@ -22,16 +22,30 @@
   display: inline-block;
   padding: 1rem 4rem;
   font-size: var(--fnt-normal);
+  text-transform: uppercase;
   color: var(--clr-neutral3);
   cursor: pointer;
+  transition: all 0.2s;
 
-  &-ghost {
+  &-dark {
     width: 100%;
     max-width: 300px;
     border: 2px solid var(--clr-neutral3);
 
     &:hover {
-      background-color: var(--clr-primary1);
+      background-color: var(--clr-neutral1);
+      color: #ffffff;
+      border-color: var(--clr-neutral3);
+    }
+  }
+
+  &-light {
+    border: 2px solid #fff;
+
+    &:hover {
+      background-color: #fff;
+      border-color: transparent;
+      color: var(--clr-primary1);
     }
   }
 }

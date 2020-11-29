@@ -11,13 +11,6 @@
   --fnt-secondary: "DM Serif Display", serif;
   --fnt-regular: 400;
   --fnt-bold: 700;
-  /*   
-  --fnt-large: 4rem;
-  --fnt-medium: 3rem;
-  --fnt-normal: 2.4rem;
-  --fnt-small: 2rem;
-  --fnt-xsmall: 1.8rem;
-  --fnt-xxsmall: 1.4rem; */
   --fnt-xlarge: 4.8rem;
   --fnt-large: 3.2rem;
   --fnt-medium: 2.2rem;
@@ -26,13 +19,20 @@
   --fnt-xsmall: 1.4rem;
   --fnt-xxsmall: 1.2rem;
   /* @media screen and (min-width: 1660px) {
-    --fnt-xbig: 3.906rem;
-    --fnt-big: 4rem;
-    --fnt-medium: 2.5rem;
-    --fnt-normal: 2rem;
-    --fnt-small: 1.6rem;
-    --fnt-xsmall: 1.4rem;
+
   } */
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --fnt-xlarge: 4.4rem;
+    --fnt-large: 3rem;
+    --fnt-medium: 2rem;
+    --fnt-normal: 1.6rem;
+    --fnt-small: 1.4rem;
+    --fnt-xsmall: 1.2rem;
+    --fnt-xxsmall: 1rem;
+  }
 }
 
 *,
@@ -101,18 +101,32 @@ h4 {
   display: inline-block;
   padding: 1rem 4rem;
   font-size: var(--fnt-normal);
+  text-transform: uppercase;
   color: var(--clr-neutral3);
   cursor: pointer;
+  transition: all 0.2s;
 }
 
-.btn-ghost {
+.btn-dark {
   width: 100%;
   max-width: 300px;
   border: 2px solid var(--clr-neutral3);
 }
 
-.btn-ghost:hover {
-  background-color: var(--clr-primary1);
+.btn-dark:hover {
+  background-color: var(--clr-neutral1);
+  color: #ffffff;
+  border-color: var(--clr-neutral3);
+}
+
+.btn-light {
+  border: 2px solid #fff;
+}
+
+.btn-light:hover {
+  background-color: #fff;
+  border-color: transparent;
+  color: var(--clr-primary1);
 }
 
 /* ANIMATIONS */
@@ -259,8 +273,7 @@ h4 {
   position: absolute;
   width: 70%;
   height: 70%;
-  background-image: url("../images/bg-pattern-intro-left-mobile.svg");
-  background-repeat: no-repeat;
+  background: url("../images/bg-pattern-intro-left-mobile.svg") no-repeat;
   top: 0;
   left: 0;
   z-index: -1;
@@ -271,10 +284,7 @@ h4 {
   position: absolute;
   width: 70%;
   height: 70%;
-  background-image: url("../images/bg-pattern-intro-right-mobile.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right bottom;
+  background: url("../images/bg-pattern-intro-right-mobile.svg") no-repeat right bottom/contain;
   right: 0;
   bottom: -40%;
   z-index: -1;
@@ -480,10 +490,7 @@ footer::before {
     height: 80%;
     top: 0;
     right: 0;
-    background-image: url("../images/bg-pattern-intro-right-desktop.svg");
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-size: contain;
+    background: url("../images/bg-pattern-intro-right-desktop.svg") no-repeat top right/contain;
   }
   .section-1::before {
     content: "";
@@ -492,10 +499,7 @@ footer::before {
     height: 80%;
     bottom: -40%;
     left: 0;
-    background-image: url("../images/bg-pattern-intro-left-desktop.svg");
-    background-repeat: no-repeat;
-    background-position: bottom left;
-    background-size: contain;
+    background: url("../images/bg-pattern-intro-left-desktop.svg") no-repeat bottom left/contain;
   }
   .nav__list {
     all: unset;
@@ -512,9 +516,14 @@ footer::before {
   }
   .nav__link:hover {
     color: var(--clr-neutral1);
+    text-decoration: underline;
   }
-  .nav .btn-ghost {
-    border: 2px solid var(--clr-neutral2);
+  .nav .btn-dark {
+    border: 2px solid var(--clr-neutral1);
+  }
+  .nav .btn-dark:hover {
+    color: #fff;
+    border-color: transparent;
   }
   .nav__toggle {
     display: none;
