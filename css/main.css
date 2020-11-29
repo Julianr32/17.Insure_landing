@@ -592,6 +592,9 @@ footer::before {
     text-align: left;
     width: 100%;
   }
+  .footer .footer-list {
+    align-self: flex-start;
+  }
   .footer__top, .footer__bottom {
     display: flex;
     align-items: center;

@@ -11,6 +11,7 @@ navToggle.addEventListener("click", () => {
   }
 });
 
+//Hide menu on link click.
 navLink.forEach((link) => {
   link.addEventListener("click", () => {
     if (nav.classList.contains("open")) {

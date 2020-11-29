@@ -346,6 +346,7 @@ footer {
 
   &__bottom {
     margin-top: 2rem;
+
     .footer-list {
       margin-bottom: 3rem;
       font-size: var(--fnt-small);
@@ -507,6 +508,10 @@ footer {
   .footer {
     text-align: left;
     width: 100%;
+
+    .footer-list {
+      align-self: flex-start;
+    }
 
     &__top,
     &__bottom {
